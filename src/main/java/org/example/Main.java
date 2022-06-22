@@ -28,14 +28,17 @@ public class Main {
         boolean quit = false;
         while (!quit) {
             Scanner scan = new Scanner(System.in);
-            System.out.println("Welcome! Please select from the following: \n [1]Rent \n [2]View rented items \n " +
+            System.out.println("\n\n\n\n\n\n\n\nWelcome! Please select from the following: \n [1]Rent \n [2]View " +
+                    "rented items \n " +
                     "[3]Quit");
             int menuOption = scan.nextInt();
 
             switch (menuOption) {
                 case 1:
+
                     boolean stillRenting = true;
                     while (stillRenting) {
+
                         for (Movie m: available) {
                             System.out.println(m.toString() + "\n_________");
                         }
@@ -89,6 +92,7 @@ public class Main {
 
                     break;
                 case 2:
+
                     System.out.println("Rented: \n\n");
                     for (Movie m: rented) {
                         System.out.println(m.toString() + "\n\n");
@@ -99,5 +103,4 @@ public class Main {
             }
         }
     }
-
 }
